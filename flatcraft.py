@@ -9,7 +9,7 @@ import math
 import gc
 gc.disable()
 root = tkinter.Tk()
-root.title("PyCraft 2D")
+root.title("FlatCraft 2D")
 game_on = False
 action_db = []
 action_id = 0
