@@ -168,55 +168,15 @@ def music():
     numpy.random.shuffle(music_array)
     pygame.mixer.init()
     while True:
-        pygame.mixer.music.load("soundtrack/default/" + music_array[0])
-        pygame.mixer.music.play()
-        while True:
-            if pygame.mixer.music.get_busy() == 0:
-                break
-        time.sleep(1)
-        pygame.mixer.music.load("soundtrack/default/" + music_array[1])
-        pygame.mixer.music.play()
-        while True:
-            if pygame.mixer.music.get_busy() == 0:
-                break
-        time.sleep(1)
-        pygame.mixer.music.load("soundtrack/default/" + music_array[2])
-        pygame.mixer.music.play()
-        while True:
-            if pygame.mixer.music.get_busy() == 0:
-                break
-        time.sleep(1)
-        pygame.mixer.music.load("soundtrack/default/" + music_array[3])
-        pygame.mixer.music.play()
-        while True:
-            if pygame.mixer.music.get_busy() == 0:
-                break
-        time.sleep(1)
-        pygame.mixer.music.load("soundtrack/default/" + music_array[4])
-        pygame.mixer.music.play()
-        while True:
-            if pygame.mixer.music.get_busy() == 0:
-                break
-        time.sleep(1)
-        pygame.mixer.music.load("soundtrack/default/" + music_array[5])
-        pygame.mixer.music.play()
-        while True:
-            if pygame.mixer.music.get_busy() == 0:
-                break
-        time.sleep(1)
-        pygame.mixer.music.load("soundtrack/default/" + music_array[6])
-        pygame.mixer.music.play()
-        while True:
-            if pygame.mixer.music.get_busy() == 0:
-                break
-        time.sleep(1)
-        pygame.mixer.music.load("soundtrack/default/" + music_array[7])
-        pygame.mixer.music.play()
-        while True:
-            if pygame.mixer.music.get_busy() == 0:
-                break
-        time.sleep(1)
-        numpy.random.shuffle(music_array)
+        songs = 7
+        for i in range(1, songs + 1):
+            pygame.mixer.music.load("soundtrack/default/" + music_array[i])
+            pygame.mixer.music.play()
+            while True:
+                if pygame.mixer.music.get_busy() == 0:
+                    break
+            time.sleep(1)
+            numpy.random.shuffle(music_array)
 def splash_screen_change():
     splash_screen = ["Hello World!","20 GOTO 10!","Call your mother!","Guess what?","Oops.","Oh man!","What happened?","OMG!","Never Mind.","Gibberish!","Did you finish your homework?","Fun!","274 lines of code!"]
     while True:
